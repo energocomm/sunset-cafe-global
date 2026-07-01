@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Sunset Cafe Ialoveni: bd. Alexandru cel Bun 57, telefon +373 611 44 412. Trimite o solicitare de rezervare.">
+  <meta name="theme-color" content="#211d1a">
+  <title>Contact — Sunset Cafe Ialoveni</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23211d1a%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-size=%2255%22 fill=%22%23f2a33a%22>S</text></svg>">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content" data-i18n="skip">Sari la conținut</a>
+  <div data-site-header></div>
+  <main id="content">
+    <header class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="contact_tag">Contact</p>
+        <h1 class="display" data-i18n="contact_title">Ne vedem la Sunset.</h1>
+        <p data-i18n="contact_text">Ai o întrebare sau vrei să rezervi o masă? Scrie-ne sau sună-ne. Formularul pregătește mesajul pentru contactarea cafenelei.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Sunset Cafe · Ialoveni</p>
+          <h2 class="section-title" data-i18n="find_us">Găsește-ne</h2>
+          <div class="contact-list">
+            <div class="contact-card"><span data-i18n="address">Adresă</span><a href="https://maps.app.goo.gl/7vemvwqDy1JJf23Y6" target="_blank" rel="noopener">Bd. Alexandru cel Bun 57, Ialoveni</a></div>
+            <div class="contact-card"><span data-i18n="phone">Telefon</span><a href="tel:+37361144412">+373 611 44 412</a></div>
+            <div class="contact-card"><span data-i18n="schedule">Program</span><strong data-i18n="current_schedule">Miercuri: 07:30–21:00</strong><br><small data-i18n="maps_check">Programul poate varia. Verifică Google Maps.</small></div>
+          </div>
+        </div>
+
+        <div class="form-card" id="formular">
+          <h2 class="section-title" data-i18n="form_title">Trimite o solicitare</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="name" data-i18n="name">Nume</label><input id="name" name="name" autocomplete="name" required data-i18n-placeholder="name_ph" placeholder="Numele tău"><p class="field-error" aria-live="polite"></p></div>
+              <div class="field"><label for="email" data-i18n="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required data-i18n-placeholder="email_ph" placeholder="nume@exemplu.md"><p class="field-error" aria-live="polite"></p></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="phone" data-i18n="form_phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel" required data-i18n-placeholder="phone_ph" placeholder="+373 ..."><p class="field-error" aria-live="polite"></p></div>
+              <div class="field"><label for="people" data-i18n="people">Număr de persoane</label><select id="people" name="people"><option value="">—</option><option>1–2</option><option>3–4</option><option>5–6</option><option>7+</option></select><p class="field-error"></p></div>
+            </div>
+            <div class="field"><label for="date" data-i18n="date">Data</label><input id="date" name="date" type="date"><p class="field-error"></p></div>
+            <div class="field"><label for="message" data-i18n="message">Mesaj</label><textarea id="message" name="message" required data-i18n-placeholder="message_ph" placeholder="Spune-ne cu ce te putem ajuta"></textarea><p class="field-error" aria-live="polite"></p></div>
+            <button class="button button-primary" type="submit" data-i18n="send">Pregătește mesajul</button>
+            <p class="form-status" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <iframe class="map-frame" title="Harta către Sunset Cafe, Ialoveni" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=46.9447814,28.7764093&z=17&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
