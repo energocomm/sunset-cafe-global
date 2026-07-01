@@ -2,18 +2,19 @@ const translations = {
   ro: {
     skip: "Sari la conținut",
     nav_home: "Acasă", nav_menu: "Meniu", nav_story: "Povestea noastră", nav_contact: "Contact",
-    reserve: "Rezervă o masă", open_menu: "Deschide meniul", lang_label: "Alege limba",
+    reserve: "Rezervă o masă", open_menu: "Deschide meniul", lang_label: "Alege limba", nav_label: "Navigare principală", home_label: "Sunset Cafe — pagina principală", menu_toggle_label: "Deschide meniul de navigare",
     hero_tag: "Cafea · mic dejun · momente bune",
     hero_title: "Dimineți care merită savurate.",
     hero_text: "Cafeaua ta de cartier din inima Ialoveniului — un loc cald pentru mic dejun, conversații și pauze fără grabă.",
-    see_menu: "Vezi meniul", find_us: "Găsește-ne", rating: "Evaluare Google", today: "Program astăzi", address_short: "Ialoveni, Moldova",
+    see_menu: "Vezi meniul", find_us: "Găsește-ne", rating: "Evaluare Google", today: "Program zilnic", address_short: "Ialoveni, Moldova",
     intro_tag: "Mai mult decât o cafea",
     intro_title: "Un loc mic, cu o stare de spirit mare.",
     intro_text: "La Sunset Cafe, ritmul încetinește. Vii pentru o cafea bună, rămâi pentru atmosfera caldă și revii pentru diminețile care încep exact cum trebuie.",
     local: "cafenea locală", menu_all_day: "mic dejun toată ziua", warm: "atmosferă caldă",
     favorites_tag: "Din meniul real", favorites_title: "Favorite pentru orice dimineață", full_menu: "Meniul complet",
+    manifesto_tag: "Ritmul Sunset", manifesto_title: "Micul dejun nu are oră. Are poftă.", manifesto_text: "De aceea, la Sunset îl poți comanda pe tot parcursul zilei — de la omlete și shakshuka până la pancakes și papanași.", manifesto_cta: "Alege-ți micul dejun",
     visit_title: "Cafeaua e mai bună când știi unde te așteaptă.",
-    visit_address: "Bd. Alexandru cel Bun 57", visit_city: "Ialoveni, Republica Moldova", phone: "Telefon", hours: "Astăzi: 07:30–21:00", hours_note: "Verifică programul actual pe Google Maps",
+    visit_address: "Bd. Alexandru cel Bun 57", visit_city: "Ialoveni, Republica Moldova", phone: "Telefon", hours: "Luni–Duminică: 07:30–21:00", hours_note: "Program zilnic",
     footer_note: "Cafea, mic dejun și timp bun petrecut împreună.", footer_explore: "Explorează", footer_visit: "Vizitează-ne", rights: "Toate drepturile rezervate.",
     menu_tag: "Micul dejun, toată ziua", menu_title: "Șase feluri. Multe motive să revii.",
     menu_intro: "Preparatele, ingredientele și prețurile sunt preluate din meniul public al Sunset Cafe.",
@@ -22,70 +23,77 @@ const translations = {
     view_maps: "Vezi locația pe Google Maps",
     story_tag: "Povestea noastră", story_title: "Un colț de liniște în mijlocul orașului.",
     story_lead: "Sunset Cafe este genul de loc care intră firesc în rutina ta: cafeaua de dimineață, brunch-ul târziu sau masa la care mai stai puțin.",
-    story_p1: "Am construit experiența în jurul lucrurilor simple: preparate familiare, porții generoase și o atmosferă în care te simți binevenit.",
-    story_p2: "Designul cald, terasa intimă și meniul de mic dejun servit pe tot parcursul zilei fac din Sunset un loc potrivit atât pentru întâlniri, cât și pentru o pauză doar pentru tine.",
+    story_p1: "Sunset Cafe este o cafenea locală nouă, deschisă în Ialoveni, cu un meniu variat și mic dejun servit pe tot parcursul zilei.",
+    story_p2: "În meniu găsești de la platouri de mic dejun și croissante cu somon până la panini, pancakes și papanași, într-o atmosferă caldă și prietenoasă.",
     quote: "Uneori, cea mai bună parte a zilei este pur și simplu să-i dai timp.",
     values_tag: "Ce contează", values_title: "Simplu, sincer, bine făcut.",
     value_1: "Gust familiar", value_1_text: "Mic dejunuri consistente și combinații pe care vrei să le comanzi din nou.",
     value_2: "Ospitalitate locală", value_2_text: "Un loc apropiat, construit pentru comunitatea din Ialoveni.",
     value_3: "Timp fără grabă", value_3_text: "O atmosferă care te invită să mai rămâi la încă o cafea.",
     contact_tag: "Contact", contact_title: "Ne vedem la Sunset.", contact_text: "Ai o întrebare sau vrei să rezervi o masă? Scrie-ne sau sună-ne. Formularul pregătește mesajul pentru contactarea cafenelei.",
-    address: "Adresă", schedule: "Program", current_schedule: "Miercuri: 07:30–21:00", maps_check: "Programul poate varia. Verifică Google Maps.",
-    form_title: "Trimite o solicitare", name: "Nume", email: "Email", form_phone: "Telefon", people: "Număr de persoane", date: "Data", message: "Mesaj", send: "Pregătește mesajul",
+    address: "Adresă", schedule: "Program",
+    day_mon: "Luni", day_tue: "Marți", day_wed: "Miercuri", day_thu: "Joi", day_fri: "Vineri", day_sat: "Sâmbătă", day_sun: "Duminică",
+    form_title: "Solicită o rezervare", form_intro: "Lasă numărul tău și detaliile rezervării. Mesajul va fi pregătit pentru cafenea.", name: "Nume", form_phone: "Telefon", people: "Număr de persoane", date: "Data", message: "Mesaj", send: "Deschide mesajul",
     name_ph: "Numele tău", email_ph: "nume@exemplu.md", phone_ph: "+373 ...", message_ph: "Spune-ne cu ce te putem ajuta",
     required: "Acest câmp este obligatoriu.", invalid_email: "Introdu o adresă de email validă.", invalid_phone: "Introdu un număr de telefon valid.",
-    form_success: "Solicitarea este pregătită. Se deschide aplicația de email pentru trimitere.",
+    form_success: "Mesajul este pregătit. Se deschide aplicația de email pentru trimitere către cafenea.",
     photo_real: "Fațada reală a Sunset Cafe din Ialoveni",
     photo_editorial: "Cafea și croissant într-o lumină caldă de apus",
-    photo_menu: "Meniul real de mic dejun Sunset Cafe, cu șase preparate și prețuri"
+    photo_menu: "Meniul real de mic dejun Sunset Cafe, cu șase preparate și prețuri", dish_photo_label: "Fotografie din meniul real: {dish}", footer_hours: "Luni–Duminică · 07:30–21:00"
   },
   en: {
     skip: "Skip to content", nav_home: "Home", nav_menu: "Menu", nav_story: "Our story", nav_contact: "Contact",
-    reserve: "Book a table", open_menu: "Open menu", lang_label: "Choose language",
+    reserve: "Book a table", open_menu: "Open menu", lang_label: "Choose language", nav_label: "Main navigation", home_label: "Sunset Cafe — home page", menu_toggle_label: "Open navigation menu",
     hero_tag: "Coffee · breakfast · good moments", hero_title: "Mornings worth savoring.",
     hero_text: "Your neighborhood café in the heart of Ialoveni — a warm place for breakfast, conversation and unhurried breaks.",
-    see_menu: "See the menu", find_us: "Find us", rating: "Google rating", today: "Today's hours", address_short: "Ialoveni, Moldova",
+    see_menu: "See the menu", find_us: "Find us", rating: "Google rating", today: "Daily hours", address_short: "Ialoveni, Moldova",
     intro_tag: "More than coffee", intro_title: "A small place with a big mood.",
     intro_text: "At Sunset Cafe, the pace slows down. Come for a good coffee, stay for the warm atmosphere, and return for mornings that start just right.",
     local: "local café", menu_all_day: "all-day breakfast", warm: "warm atmosphere",
     favorites_tag: "From the real menu", favorites_title: "Favorites for any morning", full_menu: "Full menu",
+    manifesto_tag: "The Sunset rhythm", manifesto_title: "Breakfast has no hour. Only appetite.", manifesto_text: "That is why you can order it throughout the day — from omelettes and shakshuka to pancakes and papanași.", manifesto_cta: "Choose your breakfast",
     visit_title: "Coffee tastes better when you know where it is waiting.",
-    visit_address: "57 Alexandru cel Bun Blvd", visit_city: "Ialoveni, Republic of Moldova", phone: "Phone", hours: "Today: 7:30 AM–9 PM", hours_note: "Check current hours on Google Maps",
+    visit_address: "57 Alexandru cel Bun Blvd", visit_city: "Ialoveni, Republic of Moldova", phone: "Phone", hours: "Monday–Sunday: 7:30 AM–9 PM", hours_note: "Open daily",
     footer_note: "Coffee, breakfast and good time spent together.", footer_explore: "Explore", footer_visit: "Visit us", rights: "All rights reserved.",
     menu_tag: "Breakfast, all day", menu_title: "Six dishes. Many reasons to return.", menu_intro: "Dishes, ingredients and prices are taken from Sunset Cafe's public menu.",
     real_menu_tag: "The original menu", real_menu_title: "Exactly as you will find it at the café.", real_menu_text: "Real image from the location's Google Maps gallery. Prices are in Moldovan lei and may change.", view_maps: "View on Google Maps",
     story_tag: "Our story", story_title: "A quiet corner in the middle of town.", story_lead: "Sunset Cafe is the kind of place that slips naturally into your routine: morning coffee, a late brunch, or the table where you stay a little longer.",
-    story_p1: "The experience is built around simple things: familiar dishes, generous portions and an atmosphere where you feel welcome.",
-    story_p2: "The warm design, intimate terrace and all-day breakfast menu make Sunset right for a get-together or a quiet break on your own.",
+    story_p1: "Sunset Cafe is a new local café in Ialoveni, with a varied menu and breakfast served throughout the day.",
+    story_p2: "The menu ranges from breakfast plates and salmon croissants to panini, pancakes and papanași, all in a warm and friendly atmosphere.",
     quote: "Sometimes the best part of the day is simply giving it time.",
     values_tag: "What matters", values_title: "Simple, honest, well made.", value_1: "Familiar taste", value_1_text: "Generous breakfasts and combinations you will want to order again.", value_2: "Local hospitality", value_2_text: "A friendly place built for the Ialoveni community.", value_3: "Unhurried time", value_3_text: "An atmosphere that invites you to stay for one more coffee.",
     contact_tag: "Contact", contact_title: "See you at Sunset.", contact_text: "Have a question or want to book a table? Write or call. The form prepares your message for contacting the café.",
-    address: "Address", schedule: "Hours", current_schedule: "Wednesday: 7:30 AM–9 PM", maps_check: "Hours may vary. Check Google Maps.", form_title: "Send a request", name: "Name", email: "Email", form_phone: "Phone", people: "Number of guests", date: "Date", message: "Message", send: "Prepare message",
-    name_ph: "Your name", email_ph: "name@example.com", phone_ph: "+373 ...", message_ph: "Tell us how we can help", required: "This field is required.", invalid_email: "Enter a valid email address.", invalid_phone: "Enter a valid phone number.", form_success: "Your request is ready. Your email app will open to send it.",
-    photo_real: "The real Sunset Cafe storefront in Ialoveni", photo_editorial: "Coffee and a croissant in warm sunset light", photo_menu: "The real Sunset Cafe breakfast menu showing six dishes and prices"
+    address: "Address", schedule: "Hours",
+    day_mon: "Monday", day_tue: "Tuesday", day_wed: "Wednesday", day_thu: "Thursday", day_fri: "Friday", day_sat: "Saturday", day_sun: "Sunday",
+    form_title: "Request a booking", form_intro: "Leave your phone number and booking details. We will prepare the message for the café.", name: "Name", form_phone: "Phone", people: "Number of guests", date: "Date", message: "Message", send: "Open message",
+    name_ph: "Your name", phone_ph: "+373 ...", message_ph: "Tell us how we can help", required: "This field is required.", invalid_phone: "Enter a valid phone number.", form_success: "Your message is ready. Your email app will open to send it to the café.",
+    photo_real: "The real Sunset Cafe storefront in Ialoveni", photo_editorial: "Coffee and a croissant in warm sunset light", photo_menu: "The real Sunset Cafe breakfast menu showing six dishes and prices", dish_photo_label: "Photo from the real menu: {dish}", footer_hours: "Monday–Sunday · 7:30 AM–9 PM"
   },
   ru: {
     skip: "Перейти к содержанию", nav_home: "Главная", nav_menu: "Меню", nav_story: "О нас", nav_contact: "Контакты",
-    reserve: "Забронировать стол", open_menu: "Открыть меню", lang_label: "Выберите язык",
+    reserve: "Забронировать стол", open_menu: "Открыть меню", lang_label: "Выберите язык", nav_label: "Основная навигация", home_label: "Sunset Cafe — главная страница", menu_toggle_label: "Открыть меню навигации",
     hero_tag: "Кофе · завтрак · хорошие моменты", hero_title: "Утро, которым хочется наслаждаться.",
     hero_text: "Ваша уютная кофейня в самом сердце Яловен — место для завтрака, общения и неспешных пауз.",
-    see_menu: "Смотреть меню", find_us: "Как нас найти", rating: "Рейтинг Google", today: "Сегодня", address_short: "Яловены, Молдова",
+    see_menu: "Смотреть меню", find_us: "Как нас найти", rating: "Рейтинг Google", today: "Ежедневно", address_short: "Яловены, Молдова",
     intro_tag: "Больше, чем кофе", intro_title: "Небольшое место с особым настроением.", intro_text: "В Sunset Cafe время замедляется. Приходите за хорошим кофе, оставайтесь ради теплой атмосферы и возвращайтесь за правильным началом дня.",
     local: "местная кофейня", menu_all_day: "завтрак весь день", warm: "теплая атмосфера",
     favorites_tag: "Из настоящего меню", favorites_title: "Любимые блюда для любого утра", full_menu: "Полное меню",
-    visit_title: "Кофе вкуснее, когда знаешь, где тебя ждут.", visit_address: "бул. Александру чел Бун, 57", visit_city: "Яловены, Республика Молдова", phone: "Телефон", hours: "Сегодня: 07:30–21:00", hours_note: "Уточните актуальное время в Google Maps",
+    manifesto_tag: "Ритм Sunset", manifesto_title: "У завтрака нет времени. Есть аппетит.", manifesto_text: "Поэтому в Sunset его можно заказать в течение всего дня — от омлетов и шакшуки до панкейков и папанашей.", manifesto_cta: "Выбрать завтрак",
+    visit_title: "Кофе вкуснее, когда знаешь, где тебя ждут.", visit_address: "бул. Александру чел Бун, 57", visit_city: "Яловены, Республика Молдова", phone: "Телефон", hours: "Понедельник–Воскресенье: 07:30–21:00", hours_note: "Открыто ежедневно",
     footer_note: "Кофе, завтрак и хорошее время вместе.", footer_explore: "Разделы", footer_visit: "Приходите", rights: "Все права защищены.",
     menu_tag: "Завтрак весь день", menu_title: "Шесть блюд. Много причин вернуться.", menu_intro: "Блюда, ингредиенты и цены взяты из открытого меню Sunset Cafe.",
     real_menu_tag: "Оригинальное меню", real_menu_title: "Именно таким вы увидите его в кафе.", real_menu_text: "Настоящее фото из галереи заведения в Google Maps. Цены указаны в молдавских леях и могут меняться.", view_maps: "Открыть в Google Maps",
     story_tag: "О нас", story_title: "Тихий уголок в центре города.", story_lead: "Sunset Cafe легко становится частью дня: утренний кофе, поздний бранч или столик, за которым хочется задержаться.",
-    story_p1: "В основе — простые вещи: знакомые блюда, щедрые порции и атмосфера, в которой вам рады.",
-    story_p2: "Теплый интерьер, уютная терраса и завтраки весь день делают Sunset отличным местом и для встреч, и для паузы наедине с собой.",
+    story_p1: "Sunset Cafe — новая местная кофейня в Яловенах с разнообразным меню и завтраками в течение всего дня.",
+    story_p2: "В меню есть завтраки, круассаны с лососем, панини, панкейки и папанаши — всё в теплой и дружелюбной атмосфере.",
     quote: "Иногда лучшая часть дня — просто позволить себе не спешить.",
     values_tag: "Что важно", values_title: "Просто, честно, хорошо.", value_1: "Знакомый вкус", value_1_text: "Сытные завтраки и сочетания, которые захочется заказать снова.", value_2: "Местное гостеприимство", value_2_text: "Дружелюбное место для жителей и гостей Яловен.", value_3: "Время без спешки", value_3_text: "Атмосфера, располагающая остаться еще на одну чашку.",
     contact_tag: "Контакты", contact_title: "До встречи в Sunset.", contact_text: "Есть вопрос или хотите забронировать столик? Напишите или позвоните. Форма подготовит сообщение для кафе.",
-    address: "Адрес", schedule: "Время работы", current_schedule: "Среда: 07:30–21:00", maps_check: "Время может меняться. Проверьте Google Maps.", form_title: "Отправить запрос", name: "Имя", email: "Email", form_phone: "Телефон", people: "Количество гостей", date: "Дата", message: "Сообщение", send: "Подготовить сообщение",
-    name_ph: "Ваше имя", email_ph: "name@example.com", phone_ph: "+373 ...", message_ph: "Расскажите, чем мы можем помочь", required: "Обязательное поле.", invalid_email: "Введите корректный email.", invalid_phone: "Введите корректный номер телефона.", form_success: "Запрос готов. Откроется почтовое приложение для отправки.",
-    photo_real: "Настоящий фасад Sunset Cafe в Яловенах", photo_editorial: "Кофе и круассан в теплом свете заката", photo_menu: "Настоящее меню завтраков Sunset Cafe: шесть блюд и цены"
+    address: "Адрес", schedule: "Время работы",
+    day_mon: "Понедельник", day_tue: "Вторник", day_wed: "Среда", day_thu: "Четверг", day_fri: "Пятница", day_sat: "Суббота", day_sun: "Воскресенье",
+    form_title: "Запросить бронь", form_intro: "Оставьте номер телефона и детали бронирования. Мы подготовим сообщение для кафе.", name: "Имя", form_phone: "Телефон", people: "Количество гостей", date: "Дата", message: "Сообщение", send: "Открыть сообщение",
+    name_ph: "Ваше имя", phone_ph: "+373 ...", message_ph: "Расскажите, чем мы можем помочь", required: "Обязательное поле.", invalid_phone: "Введите корректный номер телефона.", form_success: "Сообщение готово. Откроется почтовое приложение для отправки в кафе.",
+    photo_real: "Настоящий фасад Sunset Cafe в Яловенах", photo_editorial: "Кофе и круассан в теплом свете заката", photo_menu: "Настоящее меню завтраков Sunset Cafe: шесть блюд и цены", dish_photo_label: "Фото из настоящего меню: {dish}", footer_hours: "Понедельник–Воскресенье · 07:30–21:00"
   }
 };
 
@@ -132,10 +140,16 @@ function setLanguage(lang) {
     const value = translations[lang][el.dataset.i18nAlt];
     if (value) el.alt = value;
   });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach(el => {
+    const value = translations[lang][el.dataset.i18nAriaLabel];
+    if (value) el.setAttribute("aria-label", value);
+  });
   document.querySelectorAll("[data-dish]").forEach(el => {
     const dish = dishTranslations[lang][Number(el.dataset.dish)];
     el.querySelector("[data-dish-title]").textContent = dish[0];
     el.querySelector("[data-dish-description]").textContent = dish[1];
+    const image = el.querySelector('[role="img"]');
+    if (image) image.setAttribute("aria-label", translations[lang].dish_photo_label.replace("{dish}", dish[0]));
   });
   document.querySelectorAll(".lang-select").forEach(select => select.value = lang);
 }
@@ -166,6 +180,8 @@ document.querySelectorAll("[data-current-year]").forEach(el => el.textContent = 
 
 const form = document.querySelector("#contact-form");
 if (form) {
+  const dateInput = form.querySelector('input[type="date"]');
+  if (dateInput) dateInput.min = new Date().toISOString().slice(0, 10);
   const showError = (field, key) => {
     const error = field.closest(".field").querySelector(".field-error");
     error.textContent = key ? translations[document.documentElement.lang][key] : "";
@@ -178,7 +194,6 @@ if (form) {
     required.forEach(field => {
       let key = "";
       if (!field.value.trim()) key = "required";
-      else if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) key = "invalid_email";
       else if (field.type === "tel" && !/^[+\d\s().-]{7,}$/.test(field.value)) key = "invalid_phone";
       showError(field, key);
       if (key) valid = false;
@@ -187,11 +202,11 @@ if (form) {
     const data = new FormData(form);
     const subject = encodeURIComponent(`Sunset Cafe — solicitare de la ${data.get("name")}`);
     const body = encodeURIComponent(
-      `Nume: ${data.get("name")}\nEmail: ${data.get("email")}\nTelefon: ${data.get("phone") || "-"}\nPersoane: ${data.get("people") || "-"}\nData: ${data.get("date") || "-"}\n\n${data.get("message")}`
+      `Nume: ${data.get("name")}\nTelefon: ${data.get("phone") || "-"}\nPersoane: ${data.get("people") || "-"}\nData: ${data.get("date") || "-"}\n\n${data.get("message")}`
     );
     const status = form.querySelector(".form-status");
     status.hidden = false;
     status.textContent = translations[document.documentElement.lang].form_success;
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sunset.cafe.ialoveni.2025@gmail.com?subject=${subject}&body=${body}`;
   });
 }

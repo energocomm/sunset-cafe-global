@@ -3,11 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light only">
   <meta name="description" content="Sunset Cafe Ialoveni — cafea, mic dejun servit toată ziua și o atmosferă caldă pe bd. Alexandru cel Bun 57.">
   <meta name="theme-color" content="#211d1a">
+  <meta property="og:title" content="Sunset Cafe — Cafea & mic dejun în Ialoveni">
+  <meta property="og:description" content="Mic dejun toată ziua, cafea și o atmosferă caldă în centrul Ialoveniului.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://energocomm.github.io/sunset-cafe-global/">
+  <meta property="og:image" content="https://energocomm.github.io/sunset-cafe-global/assets/images/sunset-editorial-coffee.png">
   <title>Sunset Cafe — Cafea & mic dejun în Ialoveni</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23211d1a%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-size=%2255%22 fill=%22%23f2a33a%22>S</text></svg>">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/images/sunset-editorial-coffee.png" as="image" type="image/png" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Sunset Cafe",
+      "image": "https://energocomm.github.io/sunset-cafe-global/assets/images/sunset-real-01.jpg",
+      "telephone": "+37361144412",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bulevardul Alexandru cel Bun 57",
+        "addressLocality": "Ialoveni",
+        "addressCountry": "MD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.9447814,
+        "longitude": 28.7764093
+      },
+      "openingHours": "Mo-Su 07:30-21:00",
+      "sameAs": "https://maps.app.goo.gl/7vemvwqDy1JJf23Y6"
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#content" data-i18n="skip">Sari la conținut</a>
@@ -24,7 +57,7 @@
         </div>
         <div class="hero-meta" aria-label="Informații rapide">
           <div><span data-i18n="rating">Evaluare Google</span><strong>4,8 ★</strong></div>
-          <div><span data-i18n="today">Program astăzi</span><strong>07:30–21:00</strong></div>
+          <div><span data-i18n="today">Program zilnic</span><strong>07:30–21:00</strong></div>
           <div><span data-i18n="address_short">Ialoveni, Moldova</span><strong>Alexandru cel Bun 57</strong></div>
         </div>
       </div>
@@ -33,7 +66,7 @@
     <section class="section">
       <div class="container intro-grid">
         <div class="editorial-image">
-          <img src="assets/images/sunset-editorial-coffee.png" data-i18n-alt="photo_editorial" alt="Cafea și croissant într-o lumină caldă de apus" width="1536" height="919" loading="lazy">
+          <img src="assets/images/sunset-real-01.jpg" data-i18n-alt="photo_real" alt="Fațada reală a Sunset Cafe din Ialoveni" width="964" height="1600" loading="lazy">
         </div>
         <div>
           <p class="eyebrow" data-i18n="intro_tag">Mai mult decât o cafea</p>
@@ -71,20 +104,32 @@
       </div>
     </section>
 
+    <section class="manifesto-cafe">
+      <div class="container manifesto-inner">
+        <div>
+          <p class="eyebrow" data-i18n="manifesto_tag">Ritmul Sunset</p>
+          <h2 class="section-title" data-i18n="manifesto_title">Micul dejun nu are oră. Are poftă.</h2>
+        </div>
+        <div>
+          <p class="manifesto-copy" data-i18n="manifesto_text">De aceea, la Sunset îl poți comanda pe tot parcursul zilei — de la omlete și shakshuka până la pancakes și papanași.</p>
+          <a class="button button-light" href="menu.html" data-i18n="manifesto_cta">Alege-ți micul dejun</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section visit-strip">
       <div class="container visit-grid">
         <h2 class="section-title" data-i18n="visit_title">Cafeaua e mai bună când știi unde te așteaptă.</h2>
         <div class="visit-details">
           <div class="visit-item"><span aria-hidden="true">⌖</span><p><strong data-i18n="visit_address">Bd. Alexandru cel Bun 57</strong><br><small data-i18n="visit_city">Ialoveni, Republica Moldova</small></p></div>
-          <div class="visit-item"><span aria-hidden="true">◷</span><p><strong data-i18n="hours">Astăzi: 07:30–21:00</strong><br><small data-i18n="hours_note">Verifică programul actual pe Google Maps</small></p></div>
+          <div class="visit-item"><span aria-hidden="true">◷</span><p><strong data-i18n="hours">Luni–Duminică: 07:30–21:00</strong><br><small data-i18n="hours_note">Program zilnic</small></p></div>
           <a class="button button-light" href="contact.html" data-i18n="nav_contact">Contact</a>
         </div>
       </div>
     </section>
   </main>
   <div data-site-footer></div>
-  <script src="assets/js/components.js"></script>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/components.js?v=4"></script>
+  <script src="assets/js/site.js?v=4"></script>
 </body>
 </html>
-
