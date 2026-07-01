@@ -1,8 +1,10 @@
+document.documentElement.classList.add("motion-ready");
+
 const translations = {
   ro: {
     skip: "Sari la conținut",
     nav_home: "Acasă", nav_menu: "Meniu", nav_story: "Povestea noastră", nav_contact: "Contact",
-    reserve: "Rezervă o masă", open_menu: "Deschide meniul", lang_label: "Alege limba", nav_label: "Navigare principală", home_label: "Sunset Cafe — pagina principală", menu_toggle_label: "Deschide meniul de navigare",
+    reserve: "Rezervă o masă", open_menu: "Deschide meniul", close_menu: "Închide meniul", lang_label: "Alege limba", nav_label: "Navigare principală", home_label: "Sunset Cafe — pagina principală", menu_toggle_label: "Deschide meniul de navigare",
     hero_tag: "Cafea · mic dejun · momente bune",
     hero_title: "Dimineți care merită savurate.",
     hero_text: "Cafeaua ta de cartier din inima Ialoveniului — un loc cald pentru mic dejun, conversații și pauze fără grabă.",
@@ -43,7 +45,7 @@ const translations = {
   },
   en: {
     skip: "Skip to content", nav_home: "Home", nav_menu: "Menu", nav_story: "Our story", nav_contact: "Contact",
-    reserve: "Book a table", open_menu: "Open menu", lang_label: "Choose language", nav_label: "Main navigation", home_label: "Sunset Cafe — home page", menu_toggle_label: "Open navigation menu",
+    reserve: "Book a table", open_menu: "Open menu", close_menu: "Close menu", lang_label: "Choose language", nav_label: "Main navigation", home_label: "Sunset Cafe — home page", menu_toggle_label: "Open navigation menu",
     hero_tag: "Coffee · breakfast · good moments", hero_title: "Mornings worth savoring.",
     hero_text: "Your neighborhood café in the heart of Ialoveni — a warm place for breakfast, conversation and unhurried breaks.",
     see_menu: "See the menu", find_us: "Find us", rating: "Google rating", today: "Daily hours", address_short: "Ialoveni, Moldova",
@@ -71,7 +73,7 @@ const translations = {
   },
   ru: {
     skip: "Перейти к содержанию", nav_home: "Главная", nav_menu: "Меню", nav_story: "О нас", nav_contact: "Контакты",
-    reserve: "Забронировать стол", open_menu: "Открыть меню", lang_label: "Выберите язык", nav_label: "Основная навигация", home_label: "Sunset Cafe — главная страница", menu_toggle_label: "Открыть меню навигации",
+    reserve: "Забронировать стол", open_menu: "Открыть меню", close_menu: "Закрыть меню", lang_label: "Выберите язык", nav_label: "Основная навигация", home_label: "Sunset Cafe — главная страница", menu_toggle_label: "Открыть меню навигации",
     hero_tag: "Кофе · завтрак · хорошие моменты", hero_title: "Утро, которым хочется наслаждаться.",
     hero_text: "Ваша уютная кофейня в самом сердце Яловен — место для завтрака, общения и неспешных пауз.",
     see_menu: "Смотреть меню", find_us: "Как нас найти", rating: "Рейтинг Google", today: "Ежедневно", address_short: "Яловены, Молдова",
@@ -152,6 +154,10 @@ function setLanguage(lang) {
     if (image) image.setAttribute("aria-label", translations[lang].dish_photo_label.replace("{dish}", dish[0]));
   });
   document.querySelectorAll(".lang-select").forEach(select => select.value = lang);
+  const currentToggle = document.querySelector(".menu-toggle");
+  if (currentToggle?.getAttribute("aria-expanded") === "true") {
+    currentToggle.setAttribute("aria-label", translations[lang].close_menu);
+  }
 }
 
 const selectedLang = localStorage.getItem("sunset-lang") || "ro";
@@ -164,19 +170,71 @@ document.querySelectorAll(".lang-select").forEach(select => {
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
 if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(open));
-    document.body.classList.toggle("nav-open", open);
-  });
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  const closeNavigation = (returnFocus = false) => {
     nav.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", translations[document.documentElement.lang].menu_toggle_label);
     document.body.classList.remove("nav-open");
-  }));
+    if (returnFocus) toggle.focus();
+  };
+  toggle.addEventListener("click", event => {
+    const open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", translations[document.documentElement.lang][open ? "close_menu" : "menu_toggle_label"]);
+    document.body.classList.toggle("nav-open", open);
+    if (open && event.detail === 0) window.setTimeout(() => nav.querySelector("a")?.focus(), 260);
+  });
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => closeNavigation()));
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && nav.classList.contains("open")) closeNavigation(true);
+  });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", event => {
+    if (event.matches && nav.classList.contains("open")) closeNavigation();
+  });
 }
 
 document.querySelectorAll("[data-current-year]").forEach(el => el.textContent = new Date().getFullYear());
+
+const header = document.querySelector(".site-header");
+const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 18);
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
+
+const revealElements = document.querySelectorAll([
+  ".intro-grid > *",
+  ".feature-head > *",
+  ".dish-card",
+  ".manifesto-inner > *",
+  ".visit-grid > *",
+  ".story-grid > *",
+  ".value-card",
+  ".contact-grid > *",
+  ".menu-note > *"
+].join(","));
+
+revealElements.forEach((element, index) => {
+  element.classList.add("reveal-item");
+  element.style.setProperty("--reveal-delay", `${(index % 3) * 70}ms`);
+});
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reducedMotion && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .12, rootMargin: "0px 0px -35px" });
+  revealElements.forEach(element => revealObserver.observe(element));
+} else {
+  revealElements.forEach(element => element.classList.add("reveal-visible"));
+}
+
+window.requestAnimationFrame(() => {
+  window.requestAnimationFrame(() => document.documentElement.classList.add("page-loaded"));
+});
 
 const form = document.querySelector("#contact-form");
 if (form) {

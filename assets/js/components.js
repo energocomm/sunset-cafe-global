@@ -10,7 +10,7 @@ document.querySelector("[data-site-header]").innerHTML = `
         <span class="brand-mark" aria-hidden="true">S</span>
         <span class="brand-copy"><strong>SUNSET</strong><small>Cafe · Ialoveni</small></span>
       </a>
-      <nav class="main-nav" aria-label="Navigare principală" data-i18n-aria-label="nav_label">
+      <nav id="main-navigation" class="main-nav" aria-label="Navigare principală" data-i18n-aria-label="nav_label">
         ${pages.map(([href, key]) => `<a href="${href}" data-i18n="${key}" ${path === href ? 'aria-current="page"' : ""}></a>`).join("")}
       </nav>
       <div class="nav-actions">
@@ -19,7 +19,9 @@ document.querySelector("[data-site-header]").innerHTML = `
           <option value="ro">RO</option><option value="en">EN</option><option value="ru">RU</option>
         </select>
         <a class="button button-light" href="contact.html#formular" data-i18n="reserve">Rezervă o masă</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Deschide meniul de navigare" data-i18n-aria-label="menu_toggle_label"><span aria-hidden="true">☰</span></button>
+        <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Deschide meniul de navigare" data-i18n-aria-label="menu_toggle_label">
+          <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
       </div>
     </div>
   </header>`;
