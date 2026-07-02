@@ -7,7 +7,7 @@ document.querySelector("[data-site-header]").innerHTML = `
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Sunset Cafe — pagina principală" data-i18n-aria-label="home_label">
-        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="assets/images/sunset-logo.png" width="300" height="300" alt=""></span>
         <span class="brand-copy"><strong>SUNSET</strong><small>Cafe · Ialoveni</small></span>
       </a>
       <nav id="main-navigation" class="main-nav" aria-label="Navigare principală" data-i18n-aria-label="nav_label">
@@ -32,7 +32,7 @@ document.querySelector("[data-site-footer]").innerHTML = `
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html" aria-label="Sunset Cafe — pagina principală" data-i18n-aria-label="home_label">
-            <span class="brand-mark" aria-hidden="true">S</span>
+            <span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="assets/images/sunset-logo.png" width="300" height="300" alt=""></span>
             <span class="brand-copy"><strong>SUNSET</strong><small>Cafe · Ialoveni</small></span>
           </a>
           <p data-i18n="footer_note">Cafea, mic dejun și timp bun petrecut împreună.</p>
