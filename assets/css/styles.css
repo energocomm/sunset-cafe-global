@@ -485,7 +485,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .container { width: min(100% - 1.5rem, 1180px); }
   .nav-wrap { min-height: 4.45rem; gap: .55rem; }
   .brand { gap: .55rem; }
-  .brand-mark { width: 2.35rem; height: 2.35rem; }
+  .brand-mark { width: 2.5rem; height: 2.5rem; }
   .brand-copy strong { font-size: .9rem; }
   .brand-copy small { display: none; }
   .lang-select { width: 4.15rem; min-height: 2.55rem; padding-left: .62rem; background-position: right .52rem center; }
